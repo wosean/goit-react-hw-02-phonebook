@@ -17,10 +17,10 @@ export class App extends Component {
     // number: '',
   };
 
-  // handleChange = e => {
+  handleChange = value => {
   //   const { name, value } = e.target;
-  //   this.setState({ [name]: value });
-  // };
+     this.setState({ filter: value });
+  };
 
   handleSubmit = ({ name, number }) => {
     const id = nanoid();
@@ -31,7 +31,7 @@ export class App extends Component {
     if (this.state.contacts.findIndex(contact => name === contact.name) !== -1) {
       alert(`${name} is already in contacts.`);
     } else {
-      this.setState(prev=>[...prev.contacts, { name, number, id }]);
+      this.setState(prev => ({ contacts: [...prev.contacts, { name, number, id }] }));
     }
 
     // this.setState({ contacts: contactsLists });
