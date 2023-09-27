@@ -1,11 +1,7 @@
-.contactListItem {
+ .contactListItem {
     display: flex;
     flex-direction: column;
-    /* align-items: baseline; */
-    /* justify-content: space-between; */
-    /* align-content: space-between; */
-    /* gap: 2px; */
-}
+} 
 
 .contactListItemBtn {
     margin-top: 1rem;

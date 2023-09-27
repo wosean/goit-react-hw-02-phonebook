@@ -13,28 +13,19 @@ export class App extends Component {
       { id: 'id-4', name: 'Annie Copeland', number: '227-91-26' },
     ],
     filter: '',
-    // name: '',
-    // number: '',
   };
 
   handleChange = value => {
-  //   const { name, value } = e.target;
      this.setState({ filter: value });
   };
 
   handleSubmit = ({ name, number }) => {
     const id = nanoid();
-  //   const name = e.name;
-  //   const number = e.number;
-    // const contactsLists = [...this.state.contacts];
-
     if (this.state.contacts.findIndex(contact => name === contact.name) !== -1) {
       alert(`${name} is already in contacts.`);
     } else {
       this.setState(prev => ({ contacts: [...prev.contacts, { name, number, id }] }));
     }
-
-    // this.setState({ contacts: contactsLists });
   };
 
   handleDelete = e => {
